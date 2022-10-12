@@ -54,13 +54,15 @@ class CreateDatabase extends Command
             $queryCreateUser = "CREATE USER '$user'@'localhost' IDENTIFIED BY '$password'";
             $queryResetPrivileges = "GRANT SELECT ON * . * TO '$user'@'localhost'";
             $querySetNewPrivileges = "GRANT ALL PRIVILEGES ON `$schemaName` . * TO '$user'@'localhost'";
+
+            DB::statement($queryCreateDB);
+            DB::statement($queryCreateUser);
+            DB::statement($queryResetPrivileges);
+            DB::statement($querySetNewPrivileges);
         } else if ($driver == 'pgsql') {
             $query = "CREATE DATABASE $schemaName";
+            
+            DB::statement($query);
         }
-
-        DB::statement($queryCreateDB);
-        DB::statement($queryCreateUser);
-        DB::statement($queryResetPrivileges);
-        DB::statement($querySetNewPrivileges);
     }
 }
