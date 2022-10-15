@@ -1,0 +1,48 @@
+# Created by https://www.toptal.com/developers/gitignore/api/laravel,nuxtjs,vue,vuejs
+# Edit at https://www.toptal.com/developers/gitignore?templates=laravel,nuxtjs,vue,vuejs
+
+### Laravel ###
+/api/vendor/
+/api/node_modules/
+/api/npm-debug.log
+/api/yarn-error.log
+/api/
+
+# Laravel 4 specific
+/api/bootstrap/compiled.php
+/api/app/storage/
+
+# Laravel 5 & Lumen specific
+/api/public/storage
+/api/public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+/api/public_html/storage
+/api/public_html/hot
+
+/api/storage/*.key
+/api/.env
+/api/Homestead.yaml
+/api/Homestead.json
+/api/.vagrant
+/api/.phpunit.result.cache
+
+### Nuxtjs ###
+# Nuxt build
+/frontend/.nuxt
+
+# Nuxt generate
+/frontend/dist
+
+### Vue ###
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
+
+# TODO: where does this rule come from?
+/frontend/docs/_book
+
+# TODO: where does this rule come from?
+/frontend/test/
+
+# End of https://www.toptal.com/developers/gitignore/api/laravel,nuxtjs,vue,vuejs
